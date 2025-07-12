@@ -1,7 +1,11 @@
 const puppeteer = require("puppeteer");
 
 async function scrapeVideoSrcs(url) {
-  const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+      headless: true,
+      executablePath: puppeteer.executablePath(), // auto-resolved
+      args: ["--no-sandbox", "--disable-setuid-sandbox"], // required in many cloud environments
+    });
   const page = await browser.newPage();
 
   try {
