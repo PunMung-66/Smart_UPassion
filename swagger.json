@@ -10,7 +10,7 @@
       "url": "http://localhost:3000"
     },
     {
-      "url": "https://your-production-url.com"
+      "url": "https://scraping-api-rvk6.onrender.com"
     }
   ],
   "paths": {

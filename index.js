@@ -16,6 +16,11 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
  * @param {string} url.query.required - The facebook reel URL to scrape
  * @returns {Array<string>} 200 - List of video source URLs
  */
+
+app.get("/", (req, res) => {
+  res.send("The server is running ...");
+});
+
 app.get("/api/scrape-video", async (req, res) => {
   let { url } = req.query;
 
